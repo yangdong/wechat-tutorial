@@ -1,0 +1,17 @@
+<xml>
+<ToUserName><%= @message[:to_user] %></ToUserName>
+<FromUserName><%= Settings["wechat_id"] %></FromUserName>
+<CreateTime><%= Time.now.to_i %></CreateTime>
+<MsgType>news</MsgType>
+<ArticleCount><%= @message[:total] %></ArticleCount>
+<Articles>
+<% @message[:contents].each do |content|%>
+<item>
+<Title><%= content[:title] %></Title>
+<Description><%= content[:description].slice(0, 100) %></Description>
+<PicUrl><%= content[:picture] %></PicUrl>
+<Url><%= content[:url] %></Url>
+</item>
+<% end %>
+</Articles>
+</xml>
