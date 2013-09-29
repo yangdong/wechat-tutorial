@@ -1,4 +1,4 @@
-wechat_id: your_wechat_id
+wechat_id: we-chat-tutorial #replace this with your wechat id
 help_message: your help message
 welcome_message:
   title: 微信公众账户开发指南
