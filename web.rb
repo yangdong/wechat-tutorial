@@ -11,6 +11,7 @@ VIEW_HANDLER = {
 }
 
 get '/' do
+  return erb :index if params['echostr'].nil?
   params['echostr']
 end
 
